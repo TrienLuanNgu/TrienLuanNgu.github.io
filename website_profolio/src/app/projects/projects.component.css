@@ -112,3 +112,36 @@ Since it’s global, it applies to [innerHTML] content.
   padding: 4px 8px; border-radius: 9999px; font-size: 0.775rem; 
   background: #eef2ff; color: #3730a3; border: 1px solid #e0e7ff;
 }
+
+/* modal link buttons as pills */
+.actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 9999px; /* pill shape */
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  color: #0f172a;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background .15s ease, box-shadow .15s ease, transform .05s ease;
+}
+.pill-btn:hover {
+  background: #eef2ff;
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+}
+.pill-btn:active { transform: translateY(1px); }
+.pill-btn:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+.pill-btn.demo { border-color: #c7d2fe; color: #3730a3; }
+.pill-btn.repo { border-color: #fecaca; color: #991b1b; }
