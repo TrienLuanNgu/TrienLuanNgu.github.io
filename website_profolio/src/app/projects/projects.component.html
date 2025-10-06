@@ -18,7 +18,7 @@
     <div class="modal" (click)="$event.stopPropagation()">
       <button class="close" (click)="close()">x</button>
       <h3>{{ selected.title }}</h3>
-      <p [innerHTML]="selected.long| highlight: highlightTerms"></p>
+      <p [innerHTML]="selected.long | highlight: highlightTerms : 'mark' : 'hl' : 'span' : 'bigger-font'"></p>
       <div *ngIf="selected.links?.demo || selected.links?.repo">
         <a *ngIf="selected.links?.demo" [href]="selected.links?.demo" target="_blank">Live demo</a>
         <a *ngIf="selected.links?.repo" [href]="selected.links?.repo" target="_blank">Repository</a>

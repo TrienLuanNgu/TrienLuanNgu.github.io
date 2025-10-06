@@ -8,7 +8,7 @@ import { Project } from './projects.model';
   standalone: true,
   imports: [CommonModule, HighlightPipe],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent {
   constructor(){}

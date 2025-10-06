@@ -55,11 +55,46 @@
 .close { position: absolute; right: 14px; top: 10px; }
 
 /* highlight styling */
-mark, .hl {
+/* Ensure styles reach [innerHTML] content created without scope attrs */
+/* Use ::ng-deep sparingly (last resort)
+  Component CSS in Angular (default Emulated encapsulation) is rewritten with a private attribute like [_ngcontent-xxx].
+Elements that come from [innerHTML] are inserted as raw DOM and don’t get that attribute.
+Result: your component-scoped rule
+.modal :where(mark, .hl) { … }
+doesn’t match the <mark>/.hl generated inside [innerHTML] → the color didn’t change.
+When you used ::ng-deep, you pierced encapsulation, so the selector matched those raw nodes, and your color appeared.
+go below to see the other better option for these situations
+*/
+.modal ::ng-deep mark,
+.modal ::ng-deep .hl,
+.modal :where(mark, .hl) {
+/* .modal mark, .modal .hl { */
+  font-size: 1.15rem;
+  line-height: 1.65;
+  background: #f3ef07;
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+/*
+Put the highlight rule in styles.scss (or another global stylesheet):
+
+.modal mark, .modal .hl {
   background: #fff3a3;
   color: inherit;
   padding: 0 2px;
   border-radius: 3px;
+}
+
+
+Since it’s global, it applies to [innerHTML] content.
+*/
+
+/* .modal ::ng-deep .bigger-font, */
+.modal :where(.bigger-font) {
+  font-size: 1.15rem;
+  line-height: 1.65;
 }
 
 /* dark mode */
