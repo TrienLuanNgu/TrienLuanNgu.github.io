@@ -1,0 +1,20 @@
+.fixed-nav {
+  position: fixed;
+  top: env(safe-area-inset-top, 0);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: calc(0.5rem + env(safe-area-inset-top, 0)) 1rem 0.5rem 1rem;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,.85);
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Optional: subtle shadow on scroll (works even without TS) */
+@media (pointer: fine) {
+  .fixed-nav { box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+}
+
+/* Spacer so content doesn't slide under the fixed nav */
+:root { --nav-height: 64px; }         /* fallback */
+.nav-spacer { height: var(--nav-height); }
