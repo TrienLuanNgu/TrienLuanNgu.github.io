@@ -1,1 +1,28 @@
-<p>projects works!</p>
+<section class="projects">
+  <div class="grid">
+    <article class="card" *ngFor="let p of projects" (click) = "open(p)">
+      <!-- image wrapped inside a fixed-aspect container -->
+      <div class="thumb" *ngIf="p.imageUrl">
+        <img [src]="p.imageUrl" [alt]="p.title" />
+      </div>
+
+      <h3 class="title">{{ p.title }}</h3>
+      <p class="summary">{{ p.short }}</p>
+      <ul class="tech">
+        <li *ngFor="let t of p.tech">{{ t }}</li>
+      </ul>
+      <!-- <p>{{ p.short }}</p> -->
+    </article>
+  </div>
+  <div class="backdrop" *ngIf="selected" (click)="close()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <button class="close" (click)="close()">x</button>
+      <h3>{{ selected.title }}</h3>
+      <p [innerHTML]="selected.long| highlight: highlightTerms"></p>
+      <div *ngIf="selected.links?.demo || selected.links?.repo">
+        <a *ngIf="selected.links?.demo" [href]="selected.links?.demo" target="_blank">Live demo</a>
+        <a *ngIf="selected.links?.repo" [href]="selected.links?.repo" target="_blank">Repository</a>
+      </div>
+    </div>
+  </div>
+</section>

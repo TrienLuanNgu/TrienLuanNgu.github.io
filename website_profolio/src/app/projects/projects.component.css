@@ -1,0 +1,79 @@
+:host {
+  display: block; /* fills the width inside .info-panel */
+}
+
+/* Centered grid with fixed-size cards; centers 1 or many */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  justify-content: center; /* center 1 card; center group for 2+ */
+  gap: 50px; /* space between cards */
+  width: 100%;
+}
+
+/* card styling */
+.card {
+  width: 320px;
+  height: 420px; /* fixed card height */
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 12px 22px rgba(0,0,0,.08); }
+
+/* image wrapper inside card */
+.thumb { 
+  aspect-ratio: 16 / 9; 
+  width: 100%; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  background: #f3f4f6; /* placeholder bg */
+}
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Typography */
+.title { font-size: 1.15rem; line-height: 1.2; margin: 10px 0 6px; color: #0f172a; }
+.summary { 
+  font-size: 0.95rem; line-height: 1.5; color: #374151; 
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; 
+}
+
+.backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,.5);
+  display: grid; place-items: center; z-index: 50;
+}
+.modal {
+  width: min(720px, 92vw); max-height: 85vh; overflow: auto;
+  background: #fff; border-radius: 12px; padding: 20px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.25);
+}
+.close { position: absolute; right: 14px; top: 10px; }
+
+/* highlight styling */
+mark, .hl {
+  background: #fff3a3;
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .card { background: rgba(255,255,255,.9); }
+}
+
+/* tech pills at the bottom */
+.tech { 
+  list-style: none; padding: 0; margin: 10px 0 0; 
+  display: flex; flex-wrap: wrap; gap: 6px; 
+  margin-top: auto; /* push to bottom so cards align */
+}
+.tech li { 
+  padding: 4px 8px; border-radius: 9999px; font-size: 0.775rem; 
+  background: #eef2ff; color: #3730a3; border: 1px solid #e0e7ff;
+}
