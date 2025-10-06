@@ -22,11 +22,29 @@
   padding: 24px;
 }
 
+.info-panel h2 { scroll-margin-top: 96px; }
+
+/* Larger, comfortable intro paragraph */
+.info-panel .intro {
+  font-size: clamp(1.05rem, 1rem + 0.6vw, 1.35rem);
+  line-height: 1.75;
+  color: #111827;
+  margin-top: 0.5rem;
+}
+
+/* Highlight style for key terms */
+.info-panel .highlight {
+  background: linear-gradient(180deg, transparent 60%, #fef08a 0); /* soft yellow underline */
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
 /* Optional: Dark background support if your global theme is dark */
 @media (prefers-color-scheme: dark) {
   .info-panel {
     background: rgba(233, 235, 239, 0.75);
-    color: #e5e7eb;
+    color: #010101;
     border-color: rgba(34, 2, 2, 0.08);
   }
 }

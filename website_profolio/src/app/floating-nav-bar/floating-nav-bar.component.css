@@ -1,20 +1,47 @@
 .fixed-nav {
   position: fixed;
-  top: env(safe-area-inset-top, 0);
-  left: 0;
-  right: 0;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1000;
-  padding: calc(0.5rem + env(safe-area-inset-top, 0)) 1rem 0.5rem 1rem;
-  backdrop-filter: blur(6px);
-  background: rgba(255,255,255,.85);
-  border-bottom: 1px solid #eaeaea;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.5rem 0.875rem;
+  border-radius: 9999px; /* pill shape */
+  white-space: nowrap;   /* keep single line */
+
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-/* Optional: subtle shadow on scroll (works even without TS) */
-@media (pointer: fine) {
-  .fixed-nav { box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+.fixed-nav a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 9999px; /* pill hover targets */
 }
 
-/* Spacer so content doesn't slide under the fixed nav */
-:root { --nav-height: 64px; }         /* fallback */
+.fixed-nav a:hover {
+  background: rgba(5, 5, 5, 0.05);
+}
+
+/* Optional: Dark mode adjustment */
+@media (prefers-color-scheme: dark) {
+  .fixed-nav {
+    background: rgba(191, 199, 215, 0.75);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  .fixed-nav a { color: #e5e7eb; }
+  .fixed-nav a:hover { background: rgba(255, 255, 255, 0.08); }
+}
+
+/* Legacy variable kept for compatibility (unused now) */
+:root { --nav-height: 64px; }
 .nav-spacer { height: var(--nav-height); }
