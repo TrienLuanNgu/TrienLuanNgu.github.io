@@ -52,6 +52,10 @@
   background: #fff; border-radius: 12px; padding: 20px;
   box-shadow: 0 30px 60px rgba(0,0,0,.25);
 }
+.modal p {
+  /* Honor \n from bound strings while keeping normal wrapping */
+  white-space: pre-line;
+}
 .close { position: absolute; right: 14px; top: 10px; }
 
 /* highlight styling */
@@ -127,8 +131,8 @@ Since it’s global, it applies to [innerHTML] content.
   padding: 8px 14px;
   border-radius: 9999px; /* pill shape */
   border: 1px solid #e5e7eb;
-  background: #f8fafc;
-  color: #0f172a;
+  background: #1dd9eb;
+  color: #000000;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
