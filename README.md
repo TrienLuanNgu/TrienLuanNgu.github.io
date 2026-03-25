@@ -21,3 +21,7 @@ The site output will be generated in:
 `website_profolio/dist/website_profolio/browser`
 
 The workflow in this repo deploys that folder automatically when you push to `main`.
+
+Because this repository is your user site repo (`TrienLuanNgu.github.io`), the app is built with a root base path:
+
+`/`
