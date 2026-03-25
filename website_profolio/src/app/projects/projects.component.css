@@ -40,7 +40,8 @@
 .title { font-size: 1.15rem; line-height: 1.2; margin: 10px 0 6px; color: #0f172a; }
 .summary { 
   font-size: 0.95rem; line-height: 1.5; color: #374151; 
-  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; 
+  display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; 
+  white-space: pre-line;
 }
 
 .backdrop {

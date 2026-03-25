@@ -5,6 +5,7 @@ export interface Project {
   long: string;                   // optional long description (for modal)
   tech: string[];                  // e.g., ["Angular","Django","MongoDB"]
   tags?: string[];                 // e.g., ["web","mobile"]
+  highlightTerms: string[];
   imageUrl?: string;
   links?: {
     demo?: string;
