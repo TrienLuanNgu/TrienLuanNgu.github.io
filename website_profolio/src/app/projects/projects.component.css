@@ -46,7 +46,11 @@
 
 .backdrop {
   position: fixed; inset: 0; background: rgba(0,0,0,.5);
-  display: grid; place-items: center; z-index: 50;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  padding: 8.5rem 1rem 2rem;
+  z-index: 50;
 }
 .modal {
   width: min(720px, 92vw); max-height: 85vh; overflow: auto;
@@ -58,6 +62,16 @@
   white-space: pre-line;
 }
 .close { position: absolute; right: 14px; top: 10px; }
+
+@media (max-width: 640px) {
+  .backdrop {
+    padding-top: 7rem;
+  }
+
+  .modal {
+    max-height: calc(100vh - 8rem);
+  }
+}
 
 /* highlight styling */
 /* Ensure styles reach [innerHTML] content created without scope attrs */
