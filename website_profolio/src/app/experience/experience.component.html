@@ -1,1 +1,17 @@
+<div class="experience">
+  <p class="experience-intro">
+    My experience includes <strong>software development</strong>, <strong>full-stack web development</strong>, and
+    <strong>mobile app development</strong> across both <strong>Android</strong> and <strong>iOS-oriented</strong>
+    workflows. Through university work and personal projects, I have developed technical skills as well as a reliable
+    working style built around teamwork, consistency, and learning quickly.
+  </p>
 
+  <div class="experience-grid">
+    <article class="experience-card" *ngFor="let group of skillGroups">
+      <h3>{{ group.title }}</h3>
+      <ul>
+        <li *ngFor="let item of group.items">{{ item }}</li>
+      </ul>
+    </article>
+  </div>
+</div>
