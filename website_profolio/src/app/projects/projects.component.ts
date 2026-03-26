@@ -15,6 +15,38 @@ export class ProjectsComponent {
   // Terms to highlight within the long description
   projects: Project[] = [
     {
+      id: 'study-ai-in-progress',
+      title: 'Study AI (In Active Development)',
+      short: 'An in-progress project focused on building an AI-supported study experience that helps students learn more effectively and stay organised.',
+      long: "- Study AI is a project currently in active development, centred on creating a smarter and more supportive study workflow for students." +
+        "\n- The overall idea is to use AI to help with learning tasks such as organising study material, supporting revision, and making it easier for students to stay on top of their work." +
+        "\n- The project is being shaped around usability, clarity, and practical value, with the goal of turning complex study tasks into a more structured and approachable experience." +
+        "\n- It reflects my interest in combining product thinking with technical development to build tools that solve real day-to-day problems for users.",
+      tech: ['AI Product Concept', 'Web Development', 'Product Design', 'Student Tools'],
+      tags: ['in progress', 'ai', 'education', 'product'],
+      highlightTerms: ['AI', 'study', 'students', 'organising', 'revision', 'product thinking'],
+      imageUrl: 'assets/flappy-birb-img.jpeg',
+      date: '2026-03',
+      featured: true
+    },
+
+    {
+      id: 'eventease-in-progress',
+      title: 'EventEase (In Active Development)',
+      short: 'An in-progress event platform concept designed to make planning, managing, and participating in events simpler and more accessible.',
+      long: "- EventEase is a project currently in active development that focuses on improving the event experience for both organisers and attendees." +
+        "\n- The core idea is to create a platform that makes event planning feel more organised, efficient, and user-friendly from discovery through coordination and participation." +
+        "\n- It is being developed with an emphasis on clear flows, practical features, and a smooth user experience so that event management feels less fragmented and easier to handle." +
+        "\n- This project represents my interest in building digital products that solve coordination problems and turn everyday processes into something simpler and more reliable.",
+      tech: ['Platform Design', 'Web Development', 'UX Thinking', 'Product Strategy'],
+      tags: ['in progress', 'events', 'platform', 'product'],
+      highlightTerms: ['event', 'organisers', 'attendees', 'platform', 'user experience', 'coordination'],
+      imageUrl: 'assets/flappy-birb-img.jpeg',
+      date: '2026-03',
+      featured: true
+    },
+
+    {
       id: 'monash-delivery-app',
       title: 'Monash Delivery App Proposal Website',
       short: 'A concept website I built to present a delivery app idea to Monash and communicate the value of the platform clearly.',
