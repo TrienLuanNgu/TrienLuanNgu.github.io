@@ -15,6 +15,40 @@ export class ProjectsComponent {
   // Terms to highlight within the long description
   projects: Project[] = [
     {
+      id: 'monash-delivery-app',
+      title: 'Monash Delivery App Proposal Website',
+      short: 'A concept website I built to present a delivery app idea to Monash and communicate the value of the platform clearly.',
+      long: "- This project was built as part of presenting a delivery app idea to the school through a clear and structured website experience." +
+        "\n- The goal was to explain the concept in a way that felt practical, easy to follow, and relevant to student needs on campus." +
+        "\n- I focused on turning the idea into something visual and concrete so the proposal could be understood beyond just slides or written notes." +
+        "\n- The project reflects my ability to take an early-stage concept and shape it into a polished web experience that supports communication, presentation, and product thinking.",
+      tech: ['HTML', 'CSS', 'JavaScript', 'Web Design', 'Product Presentation'],
+      tags: ['web', 'concept', 'school proposal', 'presentation'],
+      highlightTerms: ['delivery app', 'school', 'website', 'proposal', 'product thinking'],
+      imageUrl: 'assets/flappy-birb-img.jpeg',
+      links: { repo: 'https://github.com/TrienLuanNgu/Monash-Delivery-App' },
+      date: '2025-09',
+      featured: true
+    },
+
+    {
+      id: 'guider-hackathon',
+      title: 'Guider (Hackathon Project)',
+      short: 'A hackathon project built under time pressure to turn an idea into a working product with a clear user focus.',
+      long: "- Guider was developed as a hackathon project, where the focus was on moving quickly from idea to implementation while still delivering a usable product." +
+        "\n- Working in a hackathon environment meant balancing speed, collaboration, and technical decision-making under a tight deadline." +
+        "\n- The project demonstrates my ability to contribute in fast-paced team settings, adapt quickly, and help turn rough ideas into something presentable and functional." +
+        "\n- It also reflects how I approach problem-solving when time is limited: prioritising core value, building what matters most first, and keeping the product direction clear.",
+      tech: ['Hackathon', 'Team Collaboration', 'Rapid Prototyping', 'Product Thinking'],
+      tags: ['hackathon', 'team project', 'rapid build'],
+      highlightTerms: ['hackathon', 'team', 'rapid', 'product', 'problem-solving'],
+      imageUrl: 'assets/flappy-birb-img.jpeg',
+      links: { repo: 'https://github.com/WillyShaoZ/Guider' },
+      date: '2025-09',
+      featured: true
+    },
+
+    {
       id: 'flappy-birb',
       title: 'Flappy Birb',
       short: 'A fun Flappy Birb FRP Game',
@@ -51,8 +85,8 @@ export class ProjectsComponent {
       date: '2025-09',
       featured: true
     }
-    
-  ]
+
+  ];
 
   selected: Project | null = null;
   open (p: Project) {this.selected = p;}
