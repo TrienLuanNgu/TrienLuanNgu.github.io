@@ -12,6 +12,8 @@ import { Project } from './projects.model';
 })
 export class ProjectsComponent {
   constructor(){}
+  private openTimer: ReturnType<typeof setTimeout> | null = null;
+
   // Terms to highlight within the long description
   projects: Project[] = [
     {
@@ -121,6 +123,26 @@ export class ProjectsComponent {
   ];
 
   selected: Project | null = null;
-  open (p: Project) {this.selected = p;}
+  open(p: Project) {
+    if (this.openTimer) {
+      clearTimeout(this.openTimer);
+    }
+
+    const projectSection = document.getElementById('project');
+    const sectionTop = projectSection?.getBoundingClientRect().top ?? 0;
+    const isNearProjectSection = Math.abs(sectionTop) < 140;
+
+    if (projectSection && !isNearProjectSection) {
+      projectSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      this.openTimer = setTimeout(() => {
+        this.selected = p;
+        this.openTimer = null;
+      }, 350);
+      return;
+    }
+
+    this.selected = p;
+  }
+
   close (){this.selected = null;}
 }
