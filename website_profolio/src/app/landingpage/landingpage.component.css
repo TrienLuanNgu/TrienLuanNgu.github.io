@@ -24,16 +24,33 @@
 
 .info-panel h2 { scroll-margin-top: 96px; }
 
+.info-panel h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 1.5rem + 1.4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
 .hero {
+  display: grid;
+  gap: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.hero-top {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
   gap: clamp(1.5rem, 1rem + 2vw, 3rem);
   align-items: start;
-  padding-bottom: 2.5rem;
 }
 
 .hero-copy {
   max-width: 700px;
+}
+
+.hero-body {
+  max-width: min(1100px, 100%);
 }
 
 .eyebrow {
@@ -59,7 +76,7 @@
   line-height: 1.7;
   color: #111827;
   margin: 0.75rem 0;
-  max-width: 62ch;
+  max-width: 78ch;
 }
 
 .info-panel .lead {
@@ -109,11 +126,11 @@
 }
 
 .section-note {
-  max-width: 68ch;
+  max-width: 78ch;
   margin: 0.6rem 0;
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: #334155;
+  font-size: clamp(1.05rem, 1rem + 0.35vw, 1.22rem);
+  line-height: 1.75;
+  color: #1f2937;
 }
 
 .section-note a {
@@ -140,7 +157,7 @@
     padding-top: 6.5rem;
   }
 
-  .hero {
+  .hero-top {
     grid-template-columns: 1fr;
   }
 
