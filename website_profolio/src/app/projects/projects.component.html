@@ -14,14 +14,17 @@
       <!-- <p>{{ p.short }}</p> -->
     </article>
   </div>
-  <div class="backdrop" *ngIf="selected" (click)="close()">
-    <div class="modal" (click)="$event.stopPropagation()">
-      <button class="close" (click)="close()">x</button>
-      <h3>{{ selected.title }}</h3>
-      <p [innerHTML]="selected.long | highlight: selected.highlightTerms : 'mark' : 'hl' : 'span' : 'bigger-font'"></p>
-      <div class="actions" *ngIf="selected.links?.demo || selected.links?.repo">
-        <a class="pill-btn demo" *ngIf="selected.links?.demo" [href]="selected.links?.demo" target="_blank" rel="noopener">Live Demo</a>
-        <a class="pill-btn repo" *ngIf="selected.links?.repo" [href]="selected.links?.repo" target="_blank" rel="noopener">Repo</a>
+
+  <div class="section-overlay" *ngIf="selected">
+    <div class="backdrop" (click)="close()">
+      <div class="modal" (click)="$event.stopPropagation()">
+        <button class="close" (click)="close()">x</button>
+        <h3>{{ selected.title }}</h3>
+        <p [innerHTML]="selected.long | highlight: selected.highlightTerms : 'mark' : 'hl' : 'span' : 'bigger-font'"></p>
+        <div class="actions" *ngIf="selected.links?.demo || selected.links?.repo">
+          <a class="pill-btn demo" *ngIf="selected.links?.demo" [href]="selected.links?.demo" target="_blank" rel="noopener">Live Demo</a>
+          <a class="pill-btn repo" *ngIf="selected.links?.repo" [href]="selected.links?.repo" target="_blank" rel="noopener">Repo</a>
+        </div>
       </div>
     </div>
   </div>
