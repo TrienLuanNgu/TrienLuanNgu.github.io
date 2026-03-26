@@ -33,9 +33,9 @@ export class ProjectsComponent {
     {
       id: 'eventease-in-progress',
       title: 'EventEase (In Active Development)',
-      short: 'An in-progress event platform concept designed to make planning, managing, and participating in events simpler and more accessible.',
-      long: "- EventEase is a project currently in active development that focuses on improving the event experience for both organisers and attendees." +
-        "\n- The core idea is to create a platform that makes event planning feel more organised, efficient, and user-friendly from discovery through coordination and participation." +
+      short: 'An in-progress event platform concept designed to support university communities across Australia, making planning, managing, and joining events simpler and more accessible.',
+      long: "- EventEase is a project currently in active development that focuses on improving the event experience for both organisers and attendees across Australian universities." +
+        "\n- The core idea is to create a platform that can support university communities such as Monash, the University of Melbourne, and other campuses across Australia, making event planning feel more organised, efficient, and user-friendly from discovery through coordination and participation." +
         "\n- It is being developed with an emphasis on clear flows, practical features, and a smooth user experience so that event management feels less fragmented and easier to handle." +
         "\n- This project represents my interest in building digital products that solve coordination problems and turn everyday processes into something simpler and more reliable.",
       tech: ['Platform Design', 'Web Development', 'UX Thinking', 'Product Strategy'],
