@@ -5,35 +5,116 @@
 .landing {
   position: relative;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem;
+  padding: 7.5rem 1.5rem 3rem;
 }
 
 .info-panel {
-  width: min(1200px, 92vw);
-  min-height: 80vh;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 50px 30px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(250, 204, 21, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 250, 252, 0.94));
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 24px;
+  padding: clamp(1.5rem, 1.2rem + 1.2vw, 3rem);
 }
 
 .info-panel h2 { scroll-margin-top: 96px; }
 
-/* Larger, comfortable intro paragraph */
-.info-panel .intro {
-  font-size: clamp(1.05rem, 1rem + 0.6vw, 1.35rem);
-  line-height: 1.75;
-  color: #111827;
-  margin: 0.75rem 0;
-  max-width: 72ch;
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
+  gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+  align-items: start;
+  padding-bottom: 2.5rem;
 }
 
-/* Highlight style for key terms */
+.hero-copy {
+  max-width: 700px;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #92400e;
+}
+
+.hero h1 {
+  margin: 0 0 1.25rem;
+  max-width: 12ch;
+  font-size: clamp(2.5rem, 1.8rem + 2.6vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: #111827;
+}
+
+.info-panel .intro {
+  font-size: clamp(1.05rem, 1rem + 0.6vw, 1.35rem);
+  line-height: 1.7;
+  color: #111827;
+  margin: 0.75rem 0;
+  max-width: 62ch;
+}
+
+.info-panel .lead {
+  font-size: clamp(1.15rem, 1.05rem + 0.7vw, 1.55rem);
+  color: #0f172a;
+}
+
+.hero-card {
+  align-self: stretch;
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.card-label {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.service-list li {
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: rgba(248, 250, 252, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.card-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #334155;
+}
+
+.content-section {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
 .info-panel .highlight {
   background: linear-gradient(180deg, transparent 60%, #fef08a 0); /* soft yellow underline */
   padding: 0 2px;
@@ -41,11 +122,44 @@
   font-weight: 600;
 }
 
-/* Optional: Dark background support if your global theme is dark */
+@media (max-width: 900px) {
+  .landing {
+    padding-top: 6.5rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .landing {
+    padding-inline: 0.75rem;
+    padding-top: 6rem;
+  }
+
+  .info-panel {
+    border-radius: 22px;
+    padding: 1.25rem;
+  }
+
+  .info-panel .intro {
+    max-width: none;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .info-panel {
     background: rgba(233, 235, 239, 0.75);
     color: #010101;
     border-color: rgba(34, 2, 2, 0.08);
+  }
+
+  .hero-card {
+    background: rgba(255, 255, 255, 0.72);
   }
 }

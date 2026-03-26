@@ -1,36 +1,52 @@
 <div class="landing">
   <div class="info-panel">
-    <h2 id="welcome"><span class="highlight">Introduction</span></h2>
-    <p class="intro">
-      Hi, my name is <span class="highlight">Trien Luan Ngu</span>, though you can call me
-      <span class="highlight">Logan</span>.
-    </p>
-    <p class="intro">
-      I'm a <span class="highlight">Computer Science</span> student at Monash University in Melbourne,
-      originally from <span class="highlight">Vietnam</span>, and I build digital products that feel clean,
-      fast, and easy to use.
-    </p>
-    <p class="intro">
-      If you're a <span class="highlight">startup brand</span> looking to launch or improve your online presence,
-      I can help design and build a modern <span class="highlight">e-commerce website</span> that showcases your
-      products clearly, supports growth, and gives customers a smooth buying experience.
-    </p>
-    <p class="intro">
-      I usually work with <span class="highlight">Angular</span>, <span class="highlight">TypeScript</span>,
-      <span class="highlight">Node</span>, <span class="highlight">Django</span>, and
-      <span class="highlight">MongoDB</span>, with a focus on performance, maintainability, and shipping useful
-      features quickly.
-    </p>
-    <p class="intro">
-      I've worked across web, mobile, and game development, and I enjoy turning ideas into polished products that
-      people actually want to use. If you're building a brand and need a developer who can help bring your store to
-      life, I'd be glad to help.
-    </p>
+    <section class="hero" id="welcome">
+      <div class="hero-copy">
+        <p class="eyebrow">Introduction</p>
+        <h1>
+          I help <span class="highlight">startup brands</span> build clean, modern
+          <span class="highlight">e-commerce websites</span>.
+        </h1>
+        <p class="intro lead">
+          Hi, my name is <span class="highlight">Trien Luan Ngu</span>, though you can call me
+          <span class="highlight">Logan</span>.
+        </p>
+        <p class="intro">
+          I'm a <span class="highlight">Computer Science</span> student at Monash University in Melbourne,
+          originally from <span class="highlight">Vietnam</span>, and I build digital products that feel clean,
+          fast, and easy to use.
+        </p>
+        <p class="intro">
+          If you're launching a brand or improving an existing store, I can help create an online experience that
+          presents your products clearly, feels trustworthy, and makes it easier for customers to buy.
+        </p>
+      </div>
 
-    <h2 id="project"><span class="highlight">Projects</span></h2>
-    <app-projects></app-projects>
+      <aside class="hero-card">
+        <p class="card-label">What I Can Help With</p>
+        <ul class="service-list">
+          <li>Responsive storefront design</li>
+          <li>Product and collection pages</li>
+          <li>Fast, maintainable frontend builds</li>
+          <li>Checkout-focused user experience</li>
+          <li>Ongoing feature improvements</li>
+        </ul>
+        <p class="card-note">
+          I usually work with <span class="highlight">Angular</span>, <span class="highlight">TypeScript</span>,
+          <span class="highlight">Node</span>, <span class="highlight">Django</span>, and
+          <span class="highlight">MongoDB</span>.
+        </p>
+      </aside>
+    </section>
 
-    <h2 id="experience"><span class="highlight">Experience</span></h2>
-    <app-experience></app-experience>
+    <section class="content-section">
+      <h2 id="project"><span class="highlight">Projects</span></h2>
+      <app-projects></app-projects>
+    </section>
+
+    <section class="content-section">
+      <h2 id="experience"><span class="highlight">Experience</span></h2>
+      <app-experience></app-experience>
+    </section>
   </div>
 </div>
