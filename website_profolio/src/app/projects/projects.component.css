@@ -49,11 +49,11 @@
   display: grid;
   justify-items: center;
   align-items: start;
-  padding: 8.5rem 1rem 2rem;
+  padding: 14rem 1rem 2rem;
   z-index: 50;
 }
 .modal {
-  width: min(720px, 92vw); max-height: 85vh; overflow: auto;
+  width: min(720px, 92vw); max-height: calc(100vh - 16rem); overflow: auto;
   background: #fff; border-radius: 12px; padding: 20px;
   box-shadow: 0 30px 60px rgba(0,0,0,.25);
 }
@@ -65,11 +65,11 @@
 
 @media (max-width: 640px) {
   .backdrop {
-    padding-top: 7rem;
+    padding-top: 10rem;
   }
 
   .modal {
-    max-height: calc(100vh - 8rem);
+    max-height: calc(100vh - 12rem);
   }
 }
 
